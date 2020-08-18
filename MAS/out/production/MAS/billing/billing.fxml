@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #f7f7f7; -fx-border-color: #333; -fx-border-width: 8;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="billing.Bill">
+    <children>
+        <Label layoutX="409.0" layoutY="68.0" text="Billing" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="30.0" />
+            </font>
+        </Label>
+        <Button layoutX="579.0" layoutY="546.0" mnemonicParsing="false" onAction="#print" prefHeight="35.0" prefWidth="239.0" style="-fx-background-color: #333;" text="Print Bill" textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="15.0" />
+            </font>
+        </Button>
+        <GridPane layoutX="316.0" layoutY="146.0" prefHeight="52.0" prefWidth="238.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Hourly Rate" textFill="#333333" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Mechanic ID" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Mechanic Name" textFill="#333333" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="hrMainLabel" text="Set hr" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="mechIDLabel" text="Set mechID" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="mechNameLabel" text="Set mechName" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="tMainLabel" text="Set t + Mins" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Time Logged" textFill="#333333" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="soLabel" text="Set serviceOrder" textFill="#333333" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Service Order No." textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <Button layoutX="77.0" layoutY="49.0" mnemonicParsing="false" onAction="#back" prefHeight="23.0" prefWidth="72.0" style="-fx-background-color: #f7f7f7;" text="«">
+            <font>
+                <Font name="Avenir Next Bold" size="40.0" />
+            </font>
+            <padding>
+                <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0" />
+            </padding>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <GridPane layoutX="76.0" layoutY="146.0" prefHeight="150.0" prefWidth="215.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="111.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="104.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="custNameLabel" text="Set Name" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="custCodeLabel" text="Set ID" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Customer Contact" textFill="#333333" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Customer Name" textFill="#333333" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="custContactLabel" text="Set Contact" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Customer ID" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Bill Number" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="billNoLabel" text="Set billNo" textFill="#333333" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="13.0" />
+                    </font>
+                </Label>
+                <Label text="Bill Date" textFill="#333333" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="todayLabel" text="Set today" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <GridPane layoutX="579.0" layoutY="146.0" prefHeight="180.0" prefWidth="246.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="113.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="133.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label prefHeight="19.0" prefWidth="150.0" text="Patch tyre if possible" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Chassis" textFill="#333333" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Job Item(s)" textFill="#333333" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="200.0" text="Replace punctured tyre" textFill="#333333" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Service Notes" textFill="#333333" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="chassisLabel" text="Set Chassis" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Registration Date" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="regDateLabel" text="Set Regdate" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="vehicleLabel" text="Set Car" textFill="#333333" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Vehicle Model" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Registration No." textFill="#333333" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="regNoLabel" text="Set Reg" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <GridPane layoutX="77.0" layoutY="464.0" prefHeight="100.0" prefWidth="448.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="116.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="107.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="102.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Qty" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Line endX="349.5" startX="-100.0" stroke="#333333" GridPane.rowIndex="1" />
+                <Label text="Spare Number" textFill="#333333" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Spare Name" textFill="#333333" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="spareNumberLabel" text="Set spareNumber" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="sqLabel" text="Set sq" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="dLabel" text="Set d" textFill="#333333" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Price" textFill="#333333" GridPane.columnIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="spareNameLabel" text="Set spareName" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="spLabel" text="Set sp" textFill="#333333" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Spare Cost" textFill="#333333" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="discountedSpareLabel" text="Set discountedSpare" textFill="#333333" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Discount" textFill="#333333" GridPane.columnIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <GridPane layoutX="76.0" layoutY="333.0" prefHeight="100.0" prefWidth="451.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="272.0" minWidth="10.0" prefWidth="272.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Labour" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Line endX="350.5" startX="-100.0" stroke="#333333" GridPane.rowIndex="1" />
+                <Label text="Minutes Logged" textFill="#333333" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Hourly Rate" textFill="#333333" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="tLabel" text="Set t" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labourLabel" text="Set labour" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="hrLabel" text="Set hr" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label text="Labour Cost" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labourCostLabel" text="Set labourCost" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <GridPane layoutX="578.0" layoutY="333.0" prefHeight="190.0" prefWidth="238.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="24.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="124.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="126.0" minWidth="10.0" prefWidth="113.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="#" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Line endX="137.2928924560547" endY="-0.5002180337905884" startX="-100.0" stroke="#333333" GridPane.rowIndex="1" />
+                <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="192.0" text="Details" textAlignment="RIGHT" textFill="#333333" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="144.0" text="Price" textAlignment="RIGHT" textFill="#333333" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="159.0" text="Total Spare Cost" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets right="10.0" />
+                    </padding>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="167.0" text="Total Labour Cost" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="finalLabourLabel" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="151.0" text="Set labourCost" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="19.0" prefWidth="23.0" text="2" textFill="#333333" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="154.0" text="Subtotal" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Next Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="subtotalLabel" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="156.0" text="Set subTotal" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Next Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="gstLabel" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="193.0" text="Set gst" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Avenir Next Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="totalLabel" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="176.0" text="Set calculateBill()" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="Avenir Next Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="138.0" text="GST 6%" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="Avenir Next Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="148.0" text="Total" textFill="#333333" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="Avenir Next Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label prefHeight="19.0" prefWidth="16.0" text="1" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="finalSpareLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="19.0" prefWidth="123.0" text="Set dSpare" textAlignment="RIGHT" textFill="#333333" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <Label fx:id="message" layoutX="76.0" layoutY="581.0" prefHeight="23.0" prefWidth="196.0" textFill="#55bc10">
+            <font>
+                <Font name="Avenir Book" size="15.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

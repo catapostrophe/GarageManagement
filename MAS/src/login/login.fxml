@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="650.0" prefWidth="430.0"
+            style="-fx-background-color: #f7f7f7; -fx-border-color: #333; -fx-border-width: 5;"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="login.LoginController">
+    <children>
+        <Label layoutX="89.0" layoutY="69.0" text="Male' Auto Service" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="30.0"/>
+            </font>
+        </Label>
+        <Label layoutX="93.0" layoutY="178.0" text="Log In" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="30.0"/>
+            </font>
+        </Label>
+        <Label layoutX="93.0" layoutY="261.0" text="Staff ID" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="staffid" layoutX="93.0" layoutY="296.0" prefHeight="33.0" prefWidth="244.0"
+                   promptText="MAS0001"
+                   style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;">
+            <font>
+                <Font name="Avenir Book" size="14.0"/>
+            </font>
+        </TextField>
+        <Label layoutX="93.0" layoutY="342.0" text="Password" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+        <PasswordField fx:id="password" layoutX="93.0" layoutY="378.0" prefHeight="33.0" prefWidth="244.0"
+                       style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;">
+            <font>
+                <Font name="Avenir Book" size="14.0"/>
+            </font>
+        </PasswordField>
+        <Button layoutX="93.0" layoutY="453.0" mnemonicParsing="false" onAction="#submit" prefHeight="27.0"
+                prefWidth="244.0" style="-fx-background-color: #333;" text="Submit" textFill="WHITE">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Button>
+        <Label fx:id="error" layoutX="93.0" layoutY="505.0" prefHeight="116.0" prefWidth="244.0" textAlignment="CENTER"
+               textFill="#ba2e11" wrapText="true">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

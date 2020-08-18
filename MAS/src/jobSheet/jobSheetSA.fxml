@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="650.0"
+            prefWidth="900.0"
+            style="-fx-background-color: #f7f7f7; -fx-border-color: #333; -fx-border-width: 8;"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="jobSheet.JobItemController">
+    <children>
+        <Label layoutX="384.0" layoutY="68.0" text="Job Sheet" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="30.0"/>
+            </font>
+        </Label>
+        <Label layoutX="79.0" layoutY="146.0" text="Service Order Number:" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="20.0"/>
+            </font>
+        </Label>
+        <Label fx:id="serviceOrderNumber" layoutX="295.0" layoutY="146.0" text="S2020/0000" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="20.0"/>
+            </font>
+        </Label>
+        <TextArea fx:id="serviceNotes" layoutX="452.0" layoutY="330.0" prefHeight="181.0" prefWidth="360.0">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </TextArea>
+        <Button layoutX="452.0" layoutY="525.0" mnemonicParsing="false" onAction="#addNewJob" prefHeight="35.0"
+                prefWidth="115.0" style="-fx-background-color: #333;" text="Add Job Item" textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="12.0"/>
+            </font>
+        </Button>
+        <TableView fx:id="jobTable" layoutX="79.0" layoutY="197.0" prefHeight="314.0" prefWidth="360.0"
+                   stylesheets="@../editLoginData/tableview.css">
+            <columns>
+                <TableColumn fx:id="jobItemColumn" onEditCommit="#changeJobCell" prefWidth="359.0" text="Job Items"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="jobTextField" layoutX="79.0" layoutY="525.0" prefHeight="35.0" prefWidth="360.0"
+                   promptText="New Job Item">
+            <font>
+                <Font name="Avenir Book" size="13.0"/>
+            </font>
+        </TextField>
+        <Button layoutX="697.0" layoutY="525.0" mnemonicParsing="false" onAction="#saveJobSheet" prefHeight="35.0"
+                prefWidth="115.0" style="-fx-background-color: #333;" text="Save Job Sheet" textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="12.0"/>
+            </font>
+        </Button>
+        <Button layoutX="575.0" layoutY="525.0" mnemonicParsing="false" onAction="#deleteSavedJob" prefHeight="35.0"
+                prefWidth="115.0" style="-fx-background-color: #333;" text="Delete Job Item" textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="12.0"/>
+            </font>
+        </Button>
+        <Label fx:id="message" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="452.0" layoutY="574.0"
+               prefHeight="23.0" prefWidth="360.0" textFill="#55bc10">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+        <Button layoutX="77.0" layoutY="49.0" mnemonicParsing="false" onAction="#back" prefHeight="23.0"
+                prefWidth="72.0" style="-fx-background-color: #f7f7f7;" text="«">
+            <font>
+                <Font name="Avenir Next Bold" size="40.0"/>
+            </font>
+            <padding>
+                <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0"/>
+            </padding>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Label layoutX="452.0" layoutY="288.0" text="Service Notes" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+        <Label layoutX="452.0" layoutY="197.0" text="Customer Number" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="customerNo" layoutX="452.0" layoutY="233.0" prefHeight="35.0" prefWidth="360.0">
+            <font>
+                <Font name="Avenir Book" size="13.0"/>
+            </font>
+        </TextField>
+        <Label fx:id="error" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="453.0" layoutY="574.0"
+               prefHeight="23.0" prefWidth="360.0" textFill="#ba2e11">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

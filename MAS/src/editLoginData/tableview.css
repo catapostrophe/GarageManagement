@@ -1,0 +1,44 @@
+.table-view {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/*Style of each column header in the tableView*/
+.table-view .column-header {
+    -fx-background-color: #333333;
+}
+
+/*Style of each column header's label  in the tableView*/
+.table-view .column-header-background .label {
+    -fx-font-family: "Avenir";
+    -fx-font-size: 15px;
+    -fx-text-fill: #f7f7f7;
+    -fx-text-alignment: center;
+}
+
+/*//Style of each column in the tableView*/
+/*.table-view .table-column:focused{*/
+/*-fx-text-fill: #395697;*/
+/*}*/
+
+/*Style of each table cell*/
+.table-view .table-cell {
+    -fx-font-family: "Avenir";
+    -fx-font-size: 14px;
+}
+
+/*Style of each entire row in the table view*/
+/*.table-row-cell:selected {*/
+/*    -fx-border-color:transparent firebrick transparent firebrick  ;*/
+/*    -fx-border-width:2.0;*/
+/*}*/
+
+/*Style of each entire row in the table view when is hovered*/
+/*.table-row-cell:hover {*/
+/*   -fx-background-color:#fdfdfd;*/
+/*}*/
+
+/*Style of each entire row in the table view when is getting focused*/
+/*.table-row-cell:focused {*/
+/*    -fx-background-color:#333333;*/
+/*}*/

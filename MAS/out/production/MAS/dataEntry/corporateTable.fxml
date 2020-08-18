@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="650.0"
+            prefWidth="900.0"
+            style="-fx-background-color: #f7f7f7; -fx-border-color: #333; -fx-border-width: 8;"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="dataEntry.CorporateController">
+    <children>
+        <Label layoutX="244.0" layoutY="68.0" text="Corporate Customer Database" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="30.0"/>
+            </font>
+        </Label>
+        <Button fx:id="add" layoutX="43.0" layoutY="144.0" mnemonicParsing="false" onAction="#addNew" prefHeight="35.0"
+                prefWidth="180.0" style="-fx-background-color: #333;" text="Add New Customer" textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Button>
+        <Button fx:id="edit" layoutX="232.0" layoutY="144.0" mnemonicParsing="false" onAction="#saveButtonPushed"
+                prefHeight="35.0" prefWidth="203.0" style="-fx-background-color: #333;" text="Save Edited Customers"
+                textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Button>
+        <Button fx:id="delete" layoutX="444.0" layoutY="144.0" mnemonicParsing="false" onAction="#deleteButtonPushed"
+                prefHeight="35.0" prefWidth="203.0" style="-fx-background-color: #333;" text="Delete Selected Customer"
+                textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Button>
+        <Button layoutX="655.0" layoutY="144.0" mnemonicParsing="false" onAction="#logout" prefHeight="35.0"
+                prefWidth="203.0" style="-fx-background-color: #333;" text="Log Out" textFill="#f7f7f7">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Button>
+        <Label fx:id="message" layoutX="43.0" layoutY="588.0" prefHeight="23.0" prefWidth="328.0" textFill="#55bc10">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+        <ScrollPane layoutX="43.0" layoutY="192.0" prefHeight="381.0" prefWidth="815.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="363.0" prefWidth="1715.0">
+                    <children>
+                        <TableView fx:id="corporateTable" layoutX="-3.0" layoutY="-1.0" prefHeight="369.0"
+                                   prefWidth="1701.0" stylesheets="@../editLoginData/tableview.css">
+                            <columns>
+                                <TableColumn fx:id="customerIDColumn" onEditCommit="#changeCustomerID" prefWidth="118.0"
+                                             text="Customer ID"/>
+                                <TableColumn fx:id="customerNameColumn" onEditCommit="#changeCustomerName"
+                                             prefWidth="150.0" text="Customer Name"/>
+                                <TableColumn fx:id="contactNoColumn" onEditCommit="#changeCustomerContact"
+                                             prefWidth="143.0" text="Contact No."/>
+                                <TableColumn fx:id="companyNameColumn" onEditCommit="#changeCompanyName"
+                                             prefWidth="135.0" text="Company Name"/>
+                                <TableColumn fx:id="modelColumn" onEditCommit="#changeCustomerModel" prefWidth="132.0"
+                                             text="Vehicle Model"/>
+                                <TableColumn fx:id="regNoColumn" onEditCommit="#changeCustomerRegNo" prefWidth="131.0"
+                                             text="Registry No."/>
+                                <TableColumn fx:id="regDateColumn" onEditCommit="#changeCustomerRegDate"
+                                             prefWidth="232.0" text="Registry Date"/>
+                                <TableColumn fx:id="chassisColumn" onEditCommit="#changeChassis" prefWidth="143.0"
+                                             text="Chassis No."/>
+                                <TableColumn fx:id="inspectionDateColumn" onEditCommit="#changeInspectionDate"
+                                             prefWidth="123.0" text="Inspection Date"/>
+                                <TableColumn fx:id="statusColumn" onEditCommit="#changeStatus" prefWidth="199.0"
+                                             text="Status"/>
+                                <TableColumn fx:id="remarksColumn" onEditCommit="#changeRemarks" prefWidth="194.0"
+                                             text="Remarks"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        <Button layoutX="77.0" layoutY="49.0" mnemonicParsing="false" onAction="#back" prefHeight="23.0"
+                prefWidth="72.0" style="-fx-background-color: #f7f7f7;" text="«">
+            <font>
+                <Font name="Avenir Next Bold" size="40.0"/>
+            </font>
+            <padding>
+                <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0"/>
+            </padding>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>

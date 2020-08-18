@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="650.0" prefWidth="900.0"
+            style="-fx-background-color: #f7f7f7; -fx-border-color: #333; -fx-border-width: 10;"
+            xmlns="http://javafx.com/javafx"
+            fx:controller="dataEntry.CaseInspection">
+    <children>
+        <Label layoutX="266.0" layoutY="68.0" text="New Customer Registration" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="30.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="483.0" layoutY="137.0" prefHeight="43.0"
+               prefWidth="303.0" text="Vehicle Details" textAlignment="CENTER" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="20.0"/>
+            </font>
+        </Label>
+        <GridPane layoutX="470.0" layoutY="186.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0"
+                                   prefWidth="113.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="216.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Model" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </Label>
+                <Label text="Registration Number" textFill="#333333" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </Label>
+                <Label text="Chassis Number" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </Label>
+                <Label text="Registration Date" textFill="#333333" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="model" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="regNo" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="chassis" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="regDate" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           promptText=" DD / MM / YYYY"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+            </children>
+        </GridPane>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="137.0" prefHeight="43.0"
+               prefWidth="303.0" text="Owner Details" textAlignment="CENTER" textFill="#333333">
+            <font>
+                <Font name="Avenir Book" size="20.0"/>
+            </font>
+        </Label>
+        <GridPane layoutX="102.0" layoutY="186.0" prefWidth="329.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0"
+                                   prefWidth="113.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="216.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <TextField fx:id="customerName" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="customerContact" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="idcardorcompany" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <Label text="Customer Name" textFill="#333333" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Label>
+                <Label text="Customer Contact" textFill="#333333" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="iclabel" text="Company Name" textFill="#333333" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Label>
+                <Label text="Customer Type" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                </Label>
+                <RadioButton fx:id="privateCustomer" mnemonicParsing="false" onAction="#privateSelected" text="Private"
+                             GridPane.columnIndex="1">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="customertype"/>
+                    </toggleGroup>
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="100.0"/>
+                    </GridPane.margin>
+                </RadioButton>
+                <RadioButton fx:id="corporateCustomer" mnemonicParsing="false" onAction="#corporateSelected"
+                             text="Corporate" toggleGroup="$customertype" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </RadioButton>
+                <Label text="Customer Identifier" textFill="#333333" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="currentID" prefHeight="17.0" prefWidth="130.0" textFill="#333333" GridPane.columnIndex="1"
+                       GridPane.rowIndex="4">
+                    <font>
+                        <Font name="Avenir Next Bold" size="12.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0"/>
+                    </GridPane.margin>
+                </Label>
+            </children>
+        </GridPane>
+        <GridPane fx:id="corporateGrid" layoutX="470.0" layoutY="386.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0"
+                                   prefWidth="113.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="216.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="90.0" valignment="TOP" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Inspection Date" textFill="#333333">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </Label>
+                <Label text="Status" textFill="#333333" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                </Label>
+                <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Remarks" textFill="#333333"
+                       GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Avenir Book" size="12.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets top="10.0"/>
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="status" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="inspectionDate" minHeight="30.0" prefHeight="10.0" prefWidth="229.0"
+                           promptText=" DD / MM / YYYY"
+                           style="-fx-border-color: #333; -fx-border-width: 2; -fx-background-color: #f4f4f4; -fx-border-radius: 3;"
+                           GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextField>
+                <TextArea fx:id="remarks" prefHeight="200.0" prefWidth="200.0"
+                          style="-fx-border-color: #333; -fx-border-width: 2; -fx-border-radius: 3; -fx-control-inner-background: #f4f4f4; -fx-background-color: #f4f4f4;"
+                          wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </GridPane.margin>
+                    <font>
+                        <Font name="Avenir Book" size="10.0"/>
+                    </font>
+                </TextArea>
+            </children>
+        </GridPane>
+        <Button layoutX="222.0" layoutY="533.0" mnemonicParsing="false" onAction="#logout" prefHeight="29.0"
+                prefWidth="196.0" style="-fx-background-color: #333;" text="Log Out" textFill="WHITE">
+            <font>
+                <Font name="Avenir Book" size="13.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Button layoutX="222.0" layoutY="494.0" mnemonicParsing="false" onAction="#registerCustomer" prefHeight="29.0"
+                prefWidth="196.0" style="-fx-background-color: #333;" text="Register Customer" textFill="WHITE">
+            <font>
+                <Font name="Avenir Book" size="13.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Button layoutX="77.0" layoutY="49.0" mnemonicParsing="false" onAction="#back" prefHeight="23.0"
+                prefWidth="72.0" style="-fx-background-color: #f7f7f7;" text="«">
+            <font>
+                <Font name="Avenir Next Bold" size="40.0"/>
+            </font>
+            <padding>
+                <Insets bottom="-10.0" left="-10.0" right="-10.0" top="-10.0"/>
+            </padding>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <Label fx:id="message" layoutX="222.0" layoutY="458.0" prefHeight="23.0" prefWidth="196.0" textFill="#55bc10">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="error" layoutX="222.0" layoutY="576.0" prefHeight="23.0" prefWidth="329.0" textFill="#ba2e11">
+            <font>
+                <Font name="Avenir Book" size="15.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
